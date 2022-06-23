@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "bf6e334a-5705-41b7-983f-6f9ec4b9d5b9",
+		"name": "golangTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户 - 注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "罗志伟",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "夜雨梧桐山",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zhiwei.luo@qq.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "18513226135",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/v1/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户 - 登陆",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "罗志伟",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/v1/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户 - 获取用户信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "8YYX4N6FjP6KdWF9QQBGVoGx+LP41sGdkmCBQLdTnpsJ4x475IwwS1rBPTMy3isUZcnTIZsRIcXngOyBCt8os9jWoj59flgP/onetKzGgKQ=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "8YYX4N6FjP6KdWF9QQBGVoGx+LP41sGdkmCBQLdTnpsJ4x475IwwS1rBPTMy3isUnn7CLERyVqCCw0Ng+3jVqBhSiMJuC+8C/uICoh1v1OY=",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/v2/userinfo",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"userinfo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "公共 - 图片上传",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "8YYX4N6FjP6KdWF9QQBGVoGx+LP41sGdkmCBQLdTnpsJ4x475IwwS1rBPTMy3isUZcnTIZsRIcXngOyBCt8os9jWoj59flgP/onetKzGgKQ=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/luozhiwei/Desktop/fa_user.sql"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/v2/upload",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "分类 - 添加/修改分类",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "测试分类-02",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "page",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "testCategory01",
+							"type": "text"
+						},
+						{
+							"key": "flag",
+							"value": "hot",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "http://127.0.0.1:8080/public/upload/954a38282d7b49d28028a2dc5330430f.jpeg",
+							"type": "text"
+						},
+						{
+							"key": "keywords",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "我是测试分类01",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/add-category",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"add-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "分类 - 删除分类",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/delete-category?id=14",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"delete-category"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "分类 - 分类列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/category-list?name&page=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"category-list"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
